@@ -1,0 +1,9 @@
+.card {
+  background-color: var(--dark-gray) !important;
+  color: var(--light-gray);
+}
+.badge {
+  z-index: 1;
+  color: var(--dark-gray) !important;
+  left: 80%;
+}
