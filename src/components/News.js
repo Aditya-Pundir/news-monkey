@@ -3,10 +3,10 @@ import NewsItem from "./NewsItem";
 import "../style/News.css";
 import loader from "../images/Loader.gif";
 
-export default function News({ category }) {
+export default function News({ category, country }) {
   const [news, setNews] = useState();
   const APIkey = process.env.REACT_APP_API_KEY;
-  const url = `https://gnews.io/api/v4/top-headlines?country=in&lang=en&max=100&topic=${category}&token=${APIkey}`;
+  const url = `https://gnews.io/api/v4/top-headlines?country=${country}&lang=en&max=100&topic=${category}&token=${APIkey}`;
 
   useEffect(() => {
     let fetchData = async () => {

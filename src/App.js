@@ -1,33 +1,59 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import News from "./components/News";
 import NavBar from "./components/NavBar";
+import "./style/App.css";
 
 function App() {
+  const [country, setCountry] = useState("us");
   return (
     <>
       <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <News key="home" category="general" />
+            <div className="countryContainer">
+              <label htmlFor="country">
+                <h5 id="countryLabel">Country:</h5>
+              </label>
+              <select id="country" onChange={(e) => setCountry(e.target.value)}>
+                <option value="us" defaultValue>
+                  USA
+                </option>
+                <option value="in">India</option>
+                <option value="au">Australia</option>
+                <option value="cn">China</option>
+                <option value="br">Brazil</option>
+                <option value="fr">France</option>
+                <option value="es">Spain</option>
+                <option value="eg">Egypt</option>
+                <option value="ua">Ukraine</option>
+                <option value="pk">Pakistan</option>
+              </select>
+            </div>
+            <News key="home" country={country} category="general" />
           </Route>
           <Route exact path="/business">
-            <News key="business" category="business" />
+            <News key="business" country={country} category="business" />
           </Route>
           <Route exact path="/entertainment">
-            <News key="entertainment" category="entertainment" />
+            <News
+              key="entertainment"
+              country={country}
+              category="entertainment"
+            />
           </Route>
           <Route exact path="/health">
-            <News key="health" category="health" />
+            <News key="health" country={country} category="health" />
           </Route>
           <Route exact path="/sports">
-            <News key="sports" category="sports" />
+            <News key="sports" country={country} category="sports" />
           </Route>
           <Route exact path="/science">
-            <News key="science" category="science" />
+            <News key="science" country={country} category="science" />
           </Route>
           <Route exact path="/technology">
-            <News key="technology" category="technology" />
+            <News key="technology" country={country} category="technology" />
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,14 @@
+.countryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#countryLabel {
+  color: var(--dark-gray);
+}
+#country {
+  width: 90%;
+  height: 5vh;
+  cursor: pointer;
+  outline: none;
+}
