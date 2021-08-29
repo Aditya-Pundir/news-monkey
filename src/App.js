@@ -16,10 +16,12 @@ function App() {
               <label htmlFor="country">
                 <h5 id="countryLabel">Country:</h5>
               </label>
-              <select id="country" onChange={(e) => setCountry(e.target.value)}>
-                <option value="us" defaultValue>
-                  USA
-                </option>
+              <select
+                id="country"
+                onChange={(e) => setCountry(e.target.value)}
+                value={country}
+              >
+                <option value="us">USA</option>
                 <option value="in">India</option>
                 <option value="au">Australia</option>
                 <option value="cn">China</option>
