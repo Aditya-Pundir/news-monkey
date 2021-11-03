@@ -5,7 +5,10 @@ import NavBar from "./components/NavBar";
 import "./style/App.css";
 
 function App() {
-  const [country, setCountry] = useState("us");
+  const [country, setCountry] = useState(
+    localStorage.getItem("country") || "us"
+  );
+  localStorage.setItem("country", country);
   return (
     <>
       <Router>
@@ -21,16 +24,36 @@ function App() {
                 onChange={(e) => setCountry(e.target.value)}
                 value={country}
               >
-                <option value="us">USA</option>
-                <option value="in">India</option>
                 <option value="au">Australia</option>
-                <option value="cn">China</option>
                 <option value="br">Brazil</option>
-                <option value="fr">France</option>
-                <option value="es">Spain</option>
+                <option value="ca">Canada</option>
+                <option value="ch">Switzerland</option>
+                <option value="cn">China</option>
+                <option value="de">Germany</option>
                 <option value="eg">Egypt</option>
-                <option value="ua">Ukraine</option>
+                <option value="es">Spain</option>
+                <option value="fr">France</option>
+                <option value="gb">United Kingdom</option>
+                <option value="gr">Greece</option>
+                <option value="hk">Hong Kong</option>
+                <option value="ie">Ireland</option>
+                <option value="il">Israel</option>
+                <option value="in">India</option>
+                <option value="it">Italy</option>
+                <option value="jp">Japan</option>
+                <option value="nl">Netherlands</option>
+                <option value="no">Norway</option>
+                <option value="pe">Peru</option>
+                <option value="ph">Philippines</option>
                 <option value="pk">Pakistan</option>
+                <option value="pt">Portugal</option>
+                <option value="ro">Romania</option>
+                <option value="ru">Russian Federation</option>
+                <option value="se">Sweden</option>
+                <option value="sg">Singapore</option>
+                <option value="tw">Taiwan, Province of China</option>
+                <option value="ua">Ukraine</option>
+                <option value="us">United States</option>
               </select>
             </div>
             <News key="home" country={country} category="general" />
