@@ -24,14 +24,16 @@ function App() {
                 onChange={(e) => setCountry(e.target.value)}
                 value={country}
               >
+                <option value="us">USA</option>
                 <option value="in">India</option>
-                <option value="us">United States</option>
                 <option value="au">Australia</option>
-                <option value="gb">United Kingdom</option>
-                <option value="ca">Canada</option>
-                <option value="ph">Philippines</option>
+                <option value="cn">China</option>
+                <option value="br">Brazil</option>
+                <option value="fr">France</option>
+                <option value="es">Spain</option>
+                <option value="eg">Egypt</option>
+                <option value="ua">Ukraine</option>
                 <option value="pk">Pakistan</option>
-                <option value="sg">Singapore</option>
               </select>
             </div>
             <News key="home" country={country} category="general" />
