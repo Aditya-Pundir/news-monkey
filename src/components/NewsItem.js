@@ -11,7 +11,7 @@ export default function NewsItem({ title, desc, image, url, date, source }) {
 
         <img src={image} className="card-img-top" alt="No pic available" />
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+          <span className="card-title">{title}</span>
           <p className="card-text">{desc}</p>
           <p className="card-text">
             Published on {new Date(date).toGMTString()}
