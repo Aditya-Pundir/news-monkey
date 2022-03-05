@@ -11,3 +11,6 @@
   color: var(--dark-gray) !important;
   left: 80%;
 }
+.btn-read {
+  margin-left: 1%;
+}

@@ -1,7 +1,9 @@
 import React from "react";
+import { useSpeechSynthesis } from "react-speech-kit";
 import "../style/NewsItem.css";
 
 export default function NewsItem({ title, desc, image, url, date, source }) {
+  const { speak } = useSpeechSynthesis();
   return (
     <div>
       <div className="card my-2">
@@ -18,6 +20,16 @@ export default function NewsItem({ title, desc, image, url, date, source }) {
           </p>
           <button
             className="btn btn-warning"
+            onClick={() =>
+              speak({
+                text: title,
+              })
+            }
+          >
+            Listen
+          </button>
+          <button
+            className="btn-read btn btn-warning"
             onClick={(e) => {
               e.preventDefault();
               window.open(url, "_blank");
