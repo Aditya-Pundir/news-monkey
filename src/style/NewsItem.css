@@ -1,6 +1,18 @@
 .card {
-  background-color: var(--dark-gray) !important;
-  color: var(--light-gray);
+  /* background-color: var(--dark-gray) !important; */
+  background-color: rgba(144, 144, 144, 0.2) !important;
+  margin:2%;
+  border:0.05rem solid white !important;
+  /* color: var(--light-gray); */
+  border-radius:1.5rem !important;
+  box-shadow: .05rem .05rem 3rem rgb(255, 255, 255)
+}
+.card-img-top{
+  border-top-left-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem !important;
+}
+.card-row{
+  margin-bottom:10%;
 }
 .card-title {
   font-size: 1.3em;
@@ -8,9 +20,14 @@
 }
 .badge {
   z-index: 1;
+  background-color:var(--primary) !important;
   color: var(--dark-gray) !important;
+  box-shadow: .1rem .1rem 1rem var(--primary);
   left: 80%;
 }
 .btn-read {
-  margin-left: 1%;
+  background: var(--primary) !important;
+  border: var(--primary) !important;
+  text-align: left;
+  
 }

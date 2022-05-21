@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/NavBar.css";
 import { NavLink } from "react-router-dom";
 import NewsMonkey from "../images/NewsMonkey.png";
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false);
+  const toggler1 = useRef(null);
+  const togglerMiddle = useRef(null);
+  const toggler2 = useRef(null);
+
+  useEffect(() => {
+    if (open) {
+      toggler1.current.classList.add("open-icon-1");
+      togglerMiddle.current.classList.add("open-icon-middle");
+      toggler2.current.classList.add("open-icon-2");
+    } else {
+      toggler1.current.classList.remove("open-icon-1");
+      togglerMiddle.current.classList.remove("open-icon-middle");
+      toggler2.current.classList.remove("open-icon-2");
+    }
+  }, [open]);
+
   return (
     <>
       <nav id="NavBar" className="navbar navbar-expand-lg fixed-top">
@@ -20,11 +37,12 @@ export default function NavBar() {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={(e) => setOpen(!open)}
           >
             <span className="navbar-toggler-icon">
-              <div className="toggler"></div>
-              <div className="toggler"></div>
-              <div className="toggler"></div>
+              <div className="toggler" ref={toggler1}></div>
+              <div className="toggler" ref={togglerMiddle}></div>
+              <div className="toggler" ref={toggler2}></div>
             </span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">

@@ -1,13 +1,11 @@
 import React from "react";
-import { useSpeechSynthesis } from "react-speech-kit";
 import "../style/NewsItem.css";
 
 export default function NewsItem({ title, desc, image, url, date, source }) {
-  const { speak } = useSpeechSynthesis();
   return (
-    <div>
+    <div className="card-row">
       <div className="card my-2">
-        <span className="badge position-absolute top-0 translate-middle badge rounded-pill bg-warning">
+        <span className="badge position-absolute top-0 translate-middle badge rounded-pill">
           {source}
         </span>
 
@@ -18,7 +16,7 @@ export default function NewsItem({ title, desc, image, url, date, source }) {
           <p className="card-text">
             Published on {new Date(date).toGMTString()}
           </p>
-          <button
+          {/* <button
             className="btn btn-warning"
             onClick={() =>
               speak({
@@ -27,7 +25,7 @@ export default function NewsItem({ title, desc, image, url, date, source }) {
             }
           >
             Listen
-          </button>
+          </button> */}
           <button
             className="btn-read btn btn-warning"
             onClick={(e) => {

@@ -12,6 +12,19 @@
   margin-top: 1vh;
   border-radius: 0.15rem;
 }
+.navbar-toggler:focus {
+  box-shadow:none !important; 
+}
+.open-icon-1{
+  transform:rotate(-45deg) translateY(1rem);
+}
+.open-icon-2{
+  transform:rotate(45deg) translateY(-1rem);
+}
+.open-icon-middle{
+  transform:translateX(-50px) !important;
+  background:transparent !important;
+}
 #logo {
   text-decoration: none;
   color: var(--logo-gray);
@@ -34,5 +47,5 @@
   color: aliceblue !important;
 }
 .active {
-  color: var(--primary-yellow) !important;
+  color: var(--primary) !important;
 }

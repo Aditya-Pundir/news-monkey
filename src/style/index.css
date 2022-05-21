@@ -6,18 +6,45 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+/* :root {
+  --logo-gray: rgb(221, 221, 221);
+  --links-gray: rgb(192, 197, 202);
+  --primary-gray: #848a92;
+  --dark-gray: #19202d;
+  --light-gray: #879da4;
+  --primary: #ffc106;
+} */
+::-webkit-scrollbar{
+  width:0.5rem;
+}
+::-webkit-scrollbar-track{
+  background:var(--primary);
+}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(var(--primary), red);
+  border-radius:1rem;
+}
+
+
 :root {
   --logo-gray: rgb(221, 221, 221);
   --links-gray: rgb(192, 197, 202);
   --primary-gray: #848a92;
   --dark-gray: #19202d;
   --light-gray: #879da4;
-  --primary-yellow: #ffc106;
+  --primary: greenyellow;
 }
 .btn-warning {
   color: var(--dark-gray) !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  border-radius: 3rem !important;
+  box-shadow: .1rem .1rem 1rem var(--primary) !important;
+}
+.btn-warning:focus {
+  box-shadow: .1rem .1rem 1rem var(--primary) !important;
 }
 
 body {
-  background-color: var(--light-gray);
+  background: linear-gradient(90deg,#79cdfb,  #8affb3);
 }

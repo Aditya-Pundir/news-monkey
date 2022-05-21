@@ -5,7 +5,8 @@ import loader from "../images/Loader.gif";
 
 export default function News({ category, country }) {
   const [news, setNews] = useState();
-  const APIkey = process.env.REACT_APP_API_KEY;
+  // const APIkey = process.env.REACT_APP_API_KEY;
+  const APIkey = "a4ea8ffcd4c7f19e313dc04ef9881811";
   const url = `https://gnews.io/api/v4/top-headlines?country=${country}&lang=en&max=100&topic=${category}&token=${APIkey}`;
 
   useEffect(() => {
