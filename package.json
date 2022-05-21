@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "autoprefixer": "10.4.5",
+    "autoprefixer": "^10.4.5",
     "bootstrap": "^5.1.0",
     "dotenv": "^10.0.0",
     "react": "^17.0.2",
@@ -38,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "resolutions": {
-    "autoprefixer": "10.4.5"
   }
 }
