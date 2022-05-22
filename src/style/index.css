@@ -1,3 +1,6 @@
+body{
+  padding-top:10vh;
+}
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +47,7 @@
 }
 
 body {
-  background: linear-gradient(90deg,#79cdfb,  #8affb3);
+  background: linear-gradient(90deg,#79cdfb,  #8affb3) no-repeat;
+  background-size:200%;
   font-family:sans-serif;
 }
