@@ -17,7 +17,7 @@
   display:flex;
   height:100vh;
   flex-direction: column;
-  gap:7%;
+  gap:4%;
   justify-content: center;
   align-items: center;
   font-size:x-large;
@@ -25,7 +25,7 @@
 .menu-container{
   width:60%;
   background-color:rgb(0 0 0 / 0.386);
-  padding:1%;
+  padding:1% 5%;
   display:flex;
   justify-content: space-between;
   align-items: center;
