@@ -1,6 +1,18 @@
+
 #loader {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.heading{
+  text-align:center;
+  font-size:x-large;
+  padding:1%;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
 }

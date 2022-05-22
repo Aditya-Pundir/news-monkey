@@ -28,10 +28,8 @@ function App() {
                 <option value="us">United States</option>
                 <option value="au">Australia</option>
                 <option value="gb">United Kingdom</option>
-                <option value="ca">Canada</option>
-                <option value="ph">Philippines</option>
-                <option value="pk">Pakistan</option>
-                <option value="sg">Singapore</option>
+                <option value="ru">Russia</option>
+                <option value="fr">France</option>
               </select>
             </div>
             <News key="home" country={country} category="general" />

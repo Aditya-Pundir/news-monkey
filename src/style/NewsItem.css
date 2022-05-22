@@ -3,31 +3,47 @@
   background-color: rgba(144, 144, 144, 0.2) !important;
   margin:2%;
   border:0.05rem solid white !important;
-  /* color: var(--light-gray); */
   border-radius:1.5rem !important;
   box-shadow: .05rem .05rem 3rem rgb(255, 255, 255)
 }
-.card-img-top{
+.card-img{
   border-top-left-radius: 1.5rem !important;
   border-top-right-radius: 1.5rem !important;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit: contain;
+  z-index: -1;
 }
 .card-row{
   margin-bottom:10%;
 }
+.card-body{
+  padding:2%;
+}
 .card-title {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: 500;
 }
+.card-desc{
+  font-size:1rem;
+  margin-top:5%;
+  font-weight:400;
+}
+.card-published{
+  margin-top:5%;
+}
+.lastContainer{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:2%
+}
 .badge {
-  z-index: 1;
-  background-color:var(--primary) !important;
   color: var(--dark-gray) !important;
-  box-shadow: .1rem .1rem 1rem var(--primary);
-  left: 80%;
 }
 .btn-read {
   background: var(--primary) !important;
   border: var(--primary) !important;
   text-align: left;
-  
+  cursor:pointer;
 }
