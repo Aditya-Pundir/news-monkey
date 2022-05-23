@@ -5,12 +5,21 @@ import NewsMonkey from "../images/NewsMonkey.png";
 
 export default function NavBar() {
   const nav = useRef(null);
+  const bar1 = useRef(null);
+  const bar2 = useRef(null);
+  const bar3 = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (visible === true) {
       document.body.style.overflowY = "hidden";
+      bar1.current.classList.add("bar1");
+      bar2.current.classList.add("hidden-bar");
+      bar3.current.classList.add("bar3");
     } else if (visible === false) {
+      bar1.current.classList.remove("bar1");
+      bar2.current.classList.remove("hidden-bar");
+      bar3.current.classList.remove("bar3");
       document.body.style.overflowY = "scroll";
     }
   }, [visible]);
@@ -28,9 +37,9 @@ export default function NavBar() {
             setVisible(!visible);
           }}
         >
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+          <div className="bar" ref={bar1}></div>
+          <div className="bar" ref={bar2}></div>
+          <div className="bar" ref={bar3}></div>
         </button>
       </nav>
       <div id="NavBar" className="container hidden" ref={nav}>
