@@ -17,10 +17,10 @@ export default function NavBar() {
       bar2.current.classList.add("hidden-bar");
       bar3.current.classList.add("bar3");
     } else if (visible === false) {
+      document.body.style.overflowY = "scroll";
       bar1.current.classList.remove("bar1");
       bar2.current.classList.remove("hidden-bar");
       bar3.current.classList.remove("bar3");
-      document.body.style.overflowY = "scroll";
     }
   }, [visible]);
 
@@ -51,6 +51,10 @@ export default function NavBar() {
                 activeClassName="active"
                 aria-current="page"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/"
               >
                 Home
@@ -61,6 +65,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/business"
               >
                 Business
@@ -71,6 +79,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/entertainment"
               >
                 Entertainment
@@ -81,6 +93,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/health"
               >
                 Health
@@ -91,6 +107,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/science"
               >
                 Science
@@ -101,6 +121,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/sports"
               >
                 Sports
@@ -111,6 +135,10 @@ export default function NavBar() {
                 className="nav-link"
                 activeClassName="active"
                 exact
+                onClick={() => {
+                  setVisible(false);
+                  nav.current.classList.toggle("hidden");
+                }}
                 to="/technology"
               >
                 Technology
